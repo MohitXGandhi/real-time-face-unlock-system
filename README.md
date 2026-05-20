@@ -1,28 +1,28 @@
-# 🔐 Real-Time Face Unlock System
+# Real-Time Face Unlock System
 
 A real-time face recognition based authentication system built as a Final Year BTech CSE (Data Science & AIML) project.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-This system uses computer vision and deep learning to recognize faces in real-time via webcam. It can register multiple users, unlock access based on face recognition, and maintain a complete access log with timestamps.
-
----
-
-## ✨ Features
-
-- 📸 **Face Registration** — Register multiple users via webcam
-- 🔓 **Real-Time Face Unlock** — Recognize faces instantly using webcam
-- 📊 **Confidence Score** — Shows match confidence percentage for each recognition
-- 👥 **Multiple User Support** — Register and manage multiple faces
-- 📋 **Access Logs** — Every unlock attempt is saved with timestamp to CSV
-- 🗑️ **Delete Users** — Remove registered users from the system
-- 🖥️ **Clean Menu Interface** — Easy to use terminal-based menu
+This system uses computer vision and deep learning to recognize faces in real time using a webcam. It supports multi-user registration, authentication using face recognition, and maintains access logs with timestamps.
 
 ---
 
-## 🛠️ Tech Stack
+## Features
+
+- Face registration using webcam
+- Real-time face recognition and authentication
+- Confidence score display for recognition accuracy
+- Multiple user support
+- Access logging with timestamps
+- Delete registered users
+- Terminal-based menu interface
+
+---
+
+## Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -36,61 +36,68 @@ This system uses computer vision and deep learning to recognize faces in real-ti
 
 ---
 
-## 📁 Project Structure
-```
-Face_unlock_system/
+## Project Structure
+
+```bash
+Real-Time-Face-Unlock-System/
 │
 ├── src/
-│   ├── main.py              # Main menu interface
-│   ├── register_face.py     # Face registration system
-│   └── unlock.py            # Face unlock/recognition system
+│   ├── main.py
+│   ├── register_face.py
+│   └── unlock.py
 │
 ├── data/
-│   └── access_log.csv       # Auto-generated access logs
+│   └── access_log.csv
 │
 ├── models/
-│   └── faces.pkl            # Saved face encodings
+│   └── faces.pkl
 │
-├── requirements.txt         # Project dependencies
-└── README.md                # Project documentation
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the repository
+
 ```bash
-git clone https://github.com/MohitXGandhi/face-unlock-system.git
-cd face-unlock-system
+git clone https://github.com/MohitXGandhi/real-time-face-unlock-system.git
+cd real-time-face-unlock-system
 ```
 
 ### 2. Create and activate virtual environment
+
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### 3. Install dlib (pre-built wheel for Python 3.11)
+### 3. Install dlib (Python 3.11 wheel)
+
 ```bash
 pip install https://github.com/z-mahmud22/Dlib_Windows_Python3.x/raw/main/dlib-19.24.1-cp311-cp311-win_amd64.whl
 ```
 
-### 4. Install remaining dependencies
+### 4. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
 
-## 🚀 Usage
+## Usage
 
-Run the main menu:
+Run the application:
+
 ```bash
 python src/main.py
 ```
 
-### Menu Options:
+### Menu Options
+
 | Option | Description |
 |--------|-------------|
 | 1 | Register a new face |
@@ -102,16 +109,29 @@ python src/main.py
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
-1. **Registration** — Webcam captures your face, converts it to a 128-dimension face encoding using dlib's deep learning model, and saves it to `models/faces.pkl`
-2. **Recognition** — Live webcam feed is compared frame by frame against saved encodings using Euclidean distance
-3. **Decision** — If distance is below threshold (0.5), access is granted with confidence score
-4. **Logging** — Every attempt is logged to `data/access_log.csv` with timestamp
+1. The system captures a user's face using a webcam
+2. Facial encodings are generated using dlib's deep learning model
+3. Encodings are stored in `models/faces.pkl`
+4. During authentication, live webcam frames are compared against stored encodings
+5. If the similarity threshold is matched, access is granted
+6. All attempts are logged in `data/access_log.csv`
 
 ---
 
-## 👨‍💻 Author
+## Future Improvements
 
-**Mohit Gandhi**
+- GUI-based interface
+- Liveness/blink detection
+- Web-based authentication system
+- Cloud deployment
+- Database integration
+- Mobile application support
+
+---
+
+## Author
+
+**Mohit Gandhi**  
 BTech CSE (Data Science & AIML)
