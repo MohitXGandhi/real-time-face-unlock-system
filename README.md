@@ -1,28 +1,28 @@
-# 🔐 Real-Time Face Unlock System
+#  Real-Time Face Unlock System
 
 A real-time face recognition based authentication system built as a Final Year BTech CSE (Data Science & AIML) project.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This system uses computer vision and deep learning to recognize faces in real-time via webcam. It can register multiple users, unlock access based on face recognition, and maintain a complete access log with timestamps.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 📸 **Face Registration** — Register multiple users via webcam
-- 🔓 **Real-Time Face Unlock** — Recognize faces instantly using webcam
-- 📊 **Confidence Score** — Shows match confidence percentage for each recognition
-- 👥 **Multiple User Support** — Register and manage multiple faces
-- 📋 **Access Logs** — Every unlock attempt is saved with timestamp to CSV
-- 🗑️ **Delete Users** — Remove registered users from the system
-- 🖥️ **Clean Menu Interface** — Easy to use terminal-based menu
+-  **Face Registration** — Register multiple users via webcam
+-  **Real-Time Face Unlock** — Recognize faces instantly using webcam
+-  **Confidence Score** — Shows match confidence percentage for each recognition
+-  **Multiple User Support** — Register and manage multiple faces
+-  **Access Logs** — Every unlock attempt is saved with timestamp to CSV
+-  **Delete Users** — Remove registered users from the system
+-  **Clean Menu Interface** — Easy to use terminal-based menu
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -36,7 +36,7 @@ This system uses computer vision and deep learning to recognize faces in real-ti
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```
 Face_unlock_system/
 │
@@ -57,7 +57,7 @@ Face_unlock_system/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the repository
 ```bash
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 Run the main menu:
 ```bash
@@ -102,7 +102,7 @@ python src/main.py
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 1. **Registration** — Webcam captures your face, converts it to a 128-dimension face encoding using dlib's deep learning model, and saves it to `models/faces.pkl`
 2. **Recognition** — Live webcam feed is compared frame by frame against saved encodings using Euclidean distance
@@ -111,7 +111,7 @@ python src/main.py
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Mohit Gandhi**
 BTech CSE (Data Science & AIML)
